@@ -18,13 +18,21 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.GeoApp",
+      "config": {
+        "googleMapsApiKey": "AIzaSyAKibqsvW4NqTqPBxydxe1vgc5IWfA6Dyc"
+        }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "bundleIdentifier": "com.example.GeoApp",
+      "config": {
+        "googleMapsApiKey": "AIzaSyAKibqsvW4NqTqPBxydxe1vgc5IWfA6Dyc"
+        }
     },
     "web": {
       "favicon": "./assets/favicon.png"
