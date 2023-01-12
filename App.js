@@ -1,20 +1,21 @@
 import { StyleSheet, View } from 'react-native';
-import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
+import MapView from 'react-native-maps';
 
 export default function App() {
   
   return (
     <View style={styles.container}>
-      <MapView
-          provider={PROVIDER_GOOGLE}
-          style={styles.map}
-          region={{
-            latitude: 37.78825,
-            longitude: -122.4324,
-            latitudeDelta: 0.015,
-            longitudeDelta: 0.0121,
-          }}
-        ></MapView>
+    <MapView
+      style={styles.map}
+      initialRegion={{
+        latitude: 37.78825,
+        longitude: -122.4324,
+        latitudeDelta: 0.0922,
+        longitudeDelta: 0.0421,
+      }}
+      showsUserLocation={true}
+      provider={MapView.PROVIDER_GOOGLE}
+    />
     </View>
   );
 }
@@ -26,4 +27,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  map: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+  }
 });
